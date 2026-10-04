@@ -38,18 +38,6 @@ a:hover { text-decoration: underline; }
 table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 560px; }
 th, td { border: 1px solid #ddd; padding: 7px 9px; text-align: left; white-space: nowrap; }
 th { background: #f9fafb; }
-/* 手机：横滑时冻结序号、代码两列 */
-@media (max-width: 640px) {
-  table th:first-child, table td:first-child {
-    position: sticky; left: 0; z-index: 2;
-    width: 2.4em; min-width: 2.4em; background: #fff;
-  }
-  table th:nth-child(2), table td:nth-child(2) {
-    position: sticky; left: 2.4em; z-index: 2; background: #fff;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.08);
-  }
-  table tr:first-child th:first-child, table tr:first-child th:nth-child(2) { background: #f9fafb; }
-}
 ul, ol { padding-left: 1.4em; }
 li { margin: 0.35em 0; }
 .diary-list { list-style: none; padding-left: 0; }
