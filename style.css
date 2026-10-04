@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 18px 40px;
+  line-height: 1.85;
+  color: #222;
+  background: #fff;
+}
+h1 { font-size: 1.45rem; margin: 0.6em 0 0.2em; }
+h2 {
+  font-size: 1.15rem;
+  border-left: 4px solid #b91c1c;
+  padding-left: 10px;
+  margin: 2em 0 0.8em;
+}
+.subtitle { color: #666; margin-top: 0; }
+.meta { color: #888; font-size: 0.88rem; }
+nav { margin: 1em 0; font-size: 0.95rem; }
+a { color: #1d4ed8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.disclaimer {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  margin: 1.2em 0;
+}
+.conclusion {
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 1em 0;
+}
+.table-wrap { overflow-x: auto; margin: 1em 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 560px; }
+th, td { border: 1px solid #ddd; padding: 7px 9px; text-align: left; white-space: nowrap; }
+th { background: #f9fafb; }
+ul, ol { padding-left: 1.4em; }
+li { margin: 0.35em 0; }
+.diary-list { list-style: none; padding-left: 0; }
+.diary-list li {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 0.8em 0;
+}
+.diary-list a { font-weight: bold; font-size: 1.02rem; }
+hr { border: none; border-top: 1px solid #e5e7eb; margin: 2em 0; }
+footer { margin-top: 3em; text-align: center; }
