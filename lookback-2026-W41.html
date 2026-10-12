@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>美股回头看周报 · 2026-W41（2026-09-28 ~ 2026-10-02）</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.up { color: #c00; } .down { color: #090; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: center; }
+th { background: #f5f5f5; }
+.table-wrap { overflow-x: auto; }
+.stat-box { background: #f9f9f9; border-left: 4px solid #1f77b4; padding: 12px 16px; margin: 16px 0; }
+.stat-box b { font-size: 18px; }
+</style>
 </head>
 <body>
 <nav><a href="index.html">← 复盘日记首页</a></nav>
@@ -20,41 +29,302 @@
 <section>
 <h2>口径说明</h2>
 <ul>
-<li>本期覆盖 5 个交易日 <strong>2026-09-28 ~ 2026-10-02</strong>（上周一到上周五，节假日顺延）：2026-09-28、09-29 当天无已发布观察池（本产品美股复盘自 2026-09-30 起有记录）；09-30、10-01、10-02 三天观察池参与统计。</li>
-<li>09-30、10-02 两期观察池为 10-05 双来源拆分前格式，来源记为"未分来源"；10-01 期（10-09 补发）已按表A（策略池来源）/表B（复盘报告来源）拆分。</li>
-<li>5日涨跌幅 = 5 个交易日后收盘价 / 入选日收盘价 - 1（T+0=入选日，T+5=5 个交易日后）。价格取自 TradeKit 程序库（Oracle stock_daily），取不到记"数据缺失"。</li>
-<li>涨跌都记，失败记录不删除。</li>
+<li>T+0=入选日（观察池发布日），T+1=买入日，T+2至T+5为持有期。</li>
+<li>本期覆盖 2026-09-28 ~ 2026-10-02：09-28、09-29 无已发布观察池；09-30、10-01、10-02 三天共 53 只入选，有效 52 只（SLP 已退市）。</li>
+<li>09-30、10-02 为 10-05 双来源拆分前格式，来源记"未分来源"；10-01 已按表A（策略池）/表B（复盘报告）拆分。</li>
+<li>机会口径：5个交易日内盘中最高价触及 +5%/+10%/+15% 即算一次机会。</li>
+<li>冲高回落：5日内最高涨幅明显大于T+5收盘涨跌幅（差值>5pct 且收盘涨幅<最高涨幅一半）。</li>
+<li>价格取自 TradeKit 程序库，涨跌都记，失败不删。</li>
 </ul>
 </section>
 
 <section>
-<h2>周总表（按5日涨跌幅降序）</h2>
+<h2>机会统计</h2>
+<div class="stat-box">
+<b>+5%机会 26 只</b>　<b>+10%机会 12 只</b>　<b>+15%机会 8 只</b>　T+5收盘亏损 32 只<br>
+<span style="color:#888">共 52 只有效样本</span>
+</div>
+</section>
+
+<section>
+<h2>周总表（按至最高涨跌幅降序）</h2>
 <div class="table-wrap">
 <table>
-<tr><th>代码</th><th>来源</th><th>入选日</th><th>入选日收盘</th><th>5日后收盘</th><th>5日涨跌幅</th></tr>
-<tr><td><strong>PACB</strong></td><td>未分来源</td><td>2026-09-30</td><td>2.37</td><td>2.72</td><td>+14.77%</td></tr><tr><td><strong>RCEL</strong></td><td>表A</td><td>2026-10-01</td><td>12.01</td><td>13.33</td><td>+10.99%</td></tr><tr><td><strong>REBN</strong></td><td>表A</td><td>2026-10-01</td><td>1.73</td><td>1.89</td><td>+9.25%</td></tr><tr><td><strong>AMPL</strong></td><td>未分来源</td><td>2026-10-02</td><td>14.52</td><td>15.67</td><td>+7.92%</td></tr><tr><td><strong>FTNT</strong></td><td>未分来源</td><td>2026-10-02</td><td>180.95</td><td>194.75</td><td>+7.63%</td></tr><tr><td><strong>NTWK</strong></td><td>表A</td><td>2026-10-01</td><td>5.75</td><td>6.04</td><td>+5.04%</td></tr><tr><td><strong>ASYS</strong></td><td>未分来源</td><td>2026-09-30</td><td>16.78</td><td>17.60</td><td>+4.89%</td></tr><tr><td><strong>ESTC</strong></td><td>未分来源</td><td>2026-10-02</td><td>93.94</td><td>98.23</td><td>+4.57%</td></tr><tr><td><strong>ELF</strong></td><td>未分来源</td><td>2026-10-02</td><td>104.68</td><td>109.23</td><td>+4.35%</td></tr><tr><td><strong>RCEL</strong></td><td>未分来源</td><td>2026-10-02</td><td>12.72</td><td>13.21</td><td>+3.85%</td></tr><tr><td><strong>XRPN</strong></td><td>表B</td><td>2026-10-01</td><td>23.43</td><td>24.20</td><td>+3.29%</td></tr><tr><td><strong>FOSL</strong></td><td>表A</td><td>2026-10-01</td><td>6.80</td><td>7.00</td><td>+2.94%</td></tr><tr><td><strong>TXN</strong></td><td>表A</td><td>2026-10-01</td><td>281.31</td><td>288.20</td><td>+2.45%</td></tr><tr><td><strong>PRCH</strong></td><td>未分来源</td><td>2026-10-02</td><td>17.31</td><td>17.56</td><td>+1.44%</td></tr><tr><td><strong>SIF</strong></td><td>未分来源</td><td>2026-09-30</td><td>22.64</td><td>22.85</td><td>+0.93%</td></tr><tr><td><strong>KLIC</strong></td><td>未分来源</td><td>2026-09-30</td><td>94.25</td><td>94.95</td><td>+0.74%</td></tr><tr><td><strong>USIO</strong></td><td>表A</td><td>2026-10-01</td><td>2.82</td><td>2.84</td><td>+0.71%</td></tr><tr><td><strong>GIW</strong></td><td>未分来源</td><td>2026-10-02</td><td>10.19</td><td>10.20</td><td>+0.15%</td></tr><tr><td><strong>TWOD</strong></td><td>未分来源</td><td>2026-10-02</td><td>26.33</td><td>26.37</td><td>+0.14%</td></tr><tr><td><strong>JRSH</strong></td><td>未分来源</td><td>2026-10-02</td><td>6.15</td><td>6.15</td><td>+0.00%</td></tr><tr><td><strong>NTWK</strong></td><td>未分来源</td><td>2026-10-02</td><td>5.95</td><td>5.93</td><td>-0.34%</td></tr><tr><td><strong>MGLD</strong></td><td>未分来源</td><td>2026-10-02</td><td>2.03</td><td>2.02</td><td>-0.49%</td></tr><tr><td><strong>CAKE</strong></td><td>表A</td><td>2026-10-01</td><td>107.95</td><td>106.91</td><td>-0.96%</td></tr><tr><td><strong>CAKE</strong></td><td>未分来源</td><td>2026-10-02</td><td>109.65</td><td>108.45</td><td>-1.09%</td></tr><tr><td><strong>SPSC</strong></td><td>未分来源</td><td>2026-09-30</td><td>82.44</td><td>81.00</td><td>-1.75%</td></tr><tr><td><strong>CRCT</strong></td><td>表A</td><td>2026-10-01</td><td>6.51</td><td>6.40</td><td>-1.77%</td></tr><tr><td><strong>CRCT</strong></td><td>未分来源</td><td>2026-10-02</td><td>6.52</td><td>6.39</td><td>-1.99%</td></tr><tr><td><strong>TTEC</strong></td><td>表B</td><td>2026-10-01</td><td>1.49</td><td>1.46</td><td>-2.01%</td></tr><tr><td><strong>AZTA</strong></td><td>未分来源</td><td>2026-10-02</td><td>38.75</td><td>37.72</td><td>-2.66%</td></tr><tr><td><strong>MRVI</strong></td><td>未分来源</td><td>2026-09-30</td><td>7.66</td><td>7.43</td><td>-3.00%</td></tr><tr><td><strong>BB</strong></td><td>未分来源</td><td>2026-10-02</td><td>9.30</td><td>8.91</td><td>-4.19%</td></tr><tr><td><strong>KOD</strong></td><td>表A</td><td>2026-10-01</td><td>98.46</td><td>94.26</td><td>-4.27%</td></tr><tr><td><strong>CURX</strong></td><td>未分来源</td><td>2026-09-30</td><td>5.03</td><td>4.77</td><td>-5.17%</td></tr><tr><td><strong>KLIC</strong></td><td>表A</td><td>2026-10-01</td><td>96.03</td><td>90.92</td><td>-5.32%</td></tr><tr><td><strong>BB</strong></td><td>表A</td><td>2026-10-01</td><td>9.18</td><td>8.63</td><td>-5.99%</td></tr><tr><td><strong>ASYS</strong></td><td>表A</td><td>2026-10-01</td><td>17.25</td><td>16.21</td><td>-6.03%</td></tr><tr><td><strong>REBN</strong></td><td>未分来源</td><td>2026-10-02</td><td>2.18</td><td>2.00</td><td>-8.26%</td></tr><tr><td><strong>ASYS</strong></td><td>未分来源</td><td>2026-10-02</td><td>18.01</td><td>16.45</td><td>-8.66%</td></tr><tr><td><strong>KLIC</strong></td><td>未分来源</td><td>2026-10-02</td><td>100.77</td><td>92.01</td><td>-8.69%</td></tr><tr><td><strong>ACLS</strong></td><td>未分来源</td><td>2026-10-02</td><td>147.77</td><td>134.71</td><td>-8.84%</td></tr><tr><td><strong>VECO</strong></td><td>未分来源</td><td>2026-10-02</td><td>57.38</td><td>52.28</td><td>-8.89%</td></tr><tr><td><strong>SENS</strong></td><td>未分来源</td><td>2026-09-30</td><td>10.17</td><td>9.16</td><td>-9.93%</td></tr><tr><td><strong>VIOT</strong></td><td>未分来源</td><td>2026-09-30</td><td>1.70</td><td>1.53</td><td>-10.00%</td></tr><tr><td><strong>BLZE</strong></td><td>未分来源</td><td>2026-10-02</td><td>14.36</td><td>12.69</td><td>-11.63%</td></tr><tr><td><strong>IOVA</strong></td><td>未分来源</td><td>2026-09-30</td><td>14.82</td><td>12.92</td><td>-12.82%</td></tr><tr><td><strong>QSI</strong></td><td>表B</td><td>2026-10-01</td><td>1.43</td><td>1.22</td><td>-14.69%</td></tr><tr><td><strong>TWST</strong></td><td>未分来源</td><td>2026-10-02</td><td>188.67</td><td>159.78</td><td>-15.31%</td></tr><tr><td><strong>CVM</strong></td><td>未分来源</td><td>2026-10-02</td><td>2.31</td><td>1.94</td><td>-16.02%</td></tr><tr><td><strong>VIOT</strong></td><td>表A</td><td>2026-10-01</td><td>1.90</td><td>1.56</td><td>-17.89%</td></tr><tr><td><strong>TWST</strong></td><td>未分来源</td><td>2026-09-30</td><td>193.24</td><td>155.65</td><td>-19.45%</td></tr><tr><td><strong>AGEN</strong></td><td>未分来源</td><td>2026-09-30</td><td>9.93</td><td>7.57</td><td>-23.77%</td></tr><tr><td><strong>XRPN</strong></td><td>未分来源</td><td>2026-10-02</td><td>39.42</td><td>17.09</td><td>-56.65%</td></tr><tr><td><strong>SLP</strong></td><td>未分来源</td><td>2026-10-02</td><td>18.50</td><td>数据缺失</td><td>数据缺失</td></tr>
+<tr><th>#</th><th>代码</th><th>来源</th><th>入选日</th><th>T+5涨跌</th><th>5日内最高</th><th>最高日</th><th>至最高涨跌幅</th><th>提示</th></tr>
+<tr><td>1</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AXRPN" target="_blank" rel="noopener"><strong>XRPN</strong></a></td><td>表B</td><td>2026-10-01</td><td class="up">+3.29%</td><td>53.00</td><td>T+1</td><td class="up">+126.21%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>2</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3APACB" target="_blank" rel="noopener"><strong>PACB</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="up">+14.77%</td><td>3.44</td><td>T+4</td><td class="up">+45.15%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>3</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AREBN" target="_blank" rel="noopener"><strong>REBN</strong></a></td><td>表A</td><td>2026-10-01</td><td class="up">+9.25%</td><td>2.29</td><td>T+3</td><td class="up">+32.25%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>4</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AVIOT" target="_blank" rel="noopener"><strong>VIOT</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-10.00%</td><td>2.22</td><td>T+1</td><td class="up">+30.59%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>5</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ACVM" target="_blank" rel="noopener"><strong>CVM</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-16.02%</td><td>2.83</td><td>T+2</td><td class="up">+22.51%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>6</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AXRPN" target="_blank" rel="noopener"><strong>XRPN</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-56.65%</td><td>48.00</td><td>T+1</td><td class="up">+21.77%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>7</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AAZTA" target="_blank" rel="noopener"><strong>AZTA</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-2.66%</td><td>46.41</td><td>T+2</td><td class="up">+19.77%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>8</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ATWST" target="_blank" rel="noopener"><strong>TWST</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-15.31%</td><td>219.71</td><td>T+2</td><td class="up">+16.45%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>9</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AMRVI" target="_blank" rel="noopener"><strong>MRVI</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-3.00%</td><td>8.74</td><td>T+4</td><td class="up">+14.10%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>10</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ATWST" target="_blank" rel="noopener"><strong>TWST</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-19.45%</td><td>219.71</td><td>T+4</td><td class="up">+13.70%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>11</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ARCEL" target="_blank" rel="noopener"><strong>RCEL</strong></a></td><td>表A</td><td>2026-10-01</td><td class="up">+10.99%</td><td>13.50</td><td>T+3</td><td class="up">+12.41%</td><td></td></tr>
+<tr><td>12</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ANTWK" target="_blank" rel="noopener"><strong>NTWK</strong></a></td><td>表A</td><td>2026-10-01</td><td class="up">+5.04%</td><td>6.38</td><td>T+2</td><td class="up">+10.96%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>13</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AAMPL" target="_blank" rel="noopener"><strong>AMPL</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+7.92%</td><td>15.87</td><td>T+5</td><td class="up">+9.30%</td><td></td></tr>
+<tr><td>14</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AASYS" target="_blank" rel="noopener"><strong>ASYS</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="up">+4.89%</td><td>18.25</td><td>T+4</td><td class="up">+8.76%</td><td></td></tr>
+<tr><td>15</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AQSI" target="_blank" rel="noopener"><strong>QSI</strong></a></td><td>表B</td><td>2026-10-01</td><td class="down">-14.69%</td><td>1.55</td><td>T+1</td><td class="up">+8.39%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>16</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AKLIC" target="_blank" rel="noopener"><strong>KLIC</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="up">+0.74%</td><td>101.94</td><td>T+3</td><td class="up">+8.16%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>17</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AFOSL" target="_blank" rel="noopener"><strong>FOSL</strong></a></td><td>表A</td><td>2026-10-01</td><td class="up">+2.94%</td><td>7.33</td><td>T+2</td><td class="up">+7.79%</td><td></td></tr>
+<tr><td>18</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ARCEL" target="_blank" rel="noopener"><strong>RCEL</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+3.85%</td><td>13.71</td><td>T+5</td><td class="up">+7.78%</td><td></td></tr>
+<tr><td>19</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AFTNT" target="_blank" rel="noopener"><strong>FTNT</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+7.63%</td><td>194.95</td><td>T+5</td><td class="up">+7.74%</td><td></td></tr>
+<tr><td>20</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ANTWK" target="_blank" rel="noopener"><strong>NTWK</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-0.34%</td><td>6.38</td><td>T+1</td><td class="up">+7.23%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>21</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ATXN" target="_blank" rel="noopener"><strong>TXN</strong></a></td><td>表A</td><td>2026-10-01</td><td class="up">+2.45%</td><td>298.75</td><td>T+3</td><td class="up">+6.20%</td><td></td></tr>
+<tr><td>22</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AKLIC" target="_blank" rel="noopener"><strong>KLIC</strong></a></td><td>表A</td><td>2026-10-01</td><td class="down">-5.32%</td><td>101.94</td><td>T+2</td><td class="up">+6.15%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>23</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ABB" target="_blank" rel="noopener"><strong>BB</strong></a></td><td>表A</td><td>2026-10-01</td><td class="down">-5.99%</td><td>9.72</td><td>T+3</td><td class="up">+5.88%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>24</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AASYS" target="_blank" rel="noopener"><strong>ASYS</strong></a></td><td>表A</td><td>2026-10-01</td><td class="down">-6.03%</td><td>18.25</td><td>T+3</td><td class="up">+5.80%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>25</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ACURX" target="_blank" rel="noopener"><strong>CURX</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-5.17%</td><td>5.29</td><td>T+4</td><td class="up">+5.17%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>26</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ASIF" target="_blank" rel="noopener"><strong>SIF</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="up">+0.93%</td><td>23.78</td><td>T+4</td><td class="up">+5.04%</td><td></td></tr>
+<tr><td>27</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AESTC" target="_blank" rel="noopener"><strong>ESTC</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+4.57%</td><td>98.60</td><td>T+2</td><td class="up">+4.96%</td><td></td></tr>
+<tr><td>28</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AREBN" target="_blank" rel="noopener"><strong>REBN</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-8.26%</td><td>2.29</td><td>T+2</td><td class="up">+4.95%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>29</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AELF" target="_blank" rel="noopener"><strong>ELF</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+4.35%</td><td>109.57</td><td>T+5</td><td class="up">+4.67%</td><td></td></tr>
+<tr><td>30</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ABB" target="_blank" rel="noopener"><strong>BB</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-4.19%</td><td>9.72</td><td>T+2</td><td class="up">+4.52%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>31</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AUSIO" target="_blank" rel="noopener"><strong>USIO</strong></a></td><td>表A</td><td>2026-10-01</td><td class="up">+0.71%</td><td>2.94</td><td>T+1</td><td class="up">+4.26%</td><td></td></tr>
+<tr><td>32</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3APRCH" target="_blank" rel="noopener"><strong>PRCH</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+1.44%</td><td>17.98</td><td>T+2</td><td class="up">+3.87%</td><td></td></tr>
+<tr><td>33</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ASENS" target="_blank" rel="noopener"><strong>SENS</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-9.93%</td><td>10.55</td><td>T+4</td><td class="up">+3.74%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>34</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ASPSC" target="_blank" rel="noopener"><strong>SPSC</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-1.75%</td><td>85.31</td><td>T+1</td><td class="up">+3.48%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>35</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ACAKE" target="_blank" rel="noopener"><strong>CAKE</strong></a></td><td>表A</td><td>2026-10-01</td><td class="down">-0.96%</td><td>111.00</td><td>T+2</td><td class="up">+2.83%</td><td></td></tr>
+<tr><td>36</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AVIOT" target="_blank" rel="noopener"><strong>VIOT</strong></a></td><td>表A</td><td>2026-10-01</td><td class="down">-17.89%</td><td>1.95</td><td>T+1</td><td class="up">+2.63%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>37</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ACRCT" target="_blank" rel="noopener"><strong>CRCT</strong></a></td><td>表A</td><td>2026-10-01</td><td class="down">-1.69%</td><td>6.62</td><td>T+1</td><td class="up">+1.69%</td><td></td></tr>
+<tr><td>38</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AIOVA" target="_blank" rel="noopener"><strong>IOVA</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-12.82%</td><td>15.03</td><td>T+1</td><td class="up">+1.42%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>39</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AASYS" target="_blank" rel="noopener"><strong>ASYS</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-8.66%</td><td>18.25</td><td>T+2</td><td class="up">+1.33%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>40</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ACAKE" target="_blank" rel="noopener"><strong>CAKE</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-1.09%</td><td>111.00</td><td>T+1</td><td class="up">+1.23%</td><td></td></tr>
+<tr><td>41</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AKLIC" target="_blank" rel="noopener"><strong>KLIC</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-8.69%</td><td>101.94</td><td>T+1</td><td class="up">+1.16%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>42</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ATWOD" target="_blank" rel="noopener"><strong>TWOD</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+0.15%</td><td>26.56</td><td>T+3</td><td class="up">+0.87%</td><td></td></tr>
+<tr><td>43</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AJRSH" target="_blank" rel="noopener"><strong>JRSH</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="">+0.00%</td><td>6.19</td><td>T+2</td><td class="up">+0.65%</td><td></td></tr>
+<tr><td>44</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AAGEN" target="_blank" rel="noopener"><strong>AGEN</strong></a></td><td>未分来源</td><td>2026-09-30</td><td class="down">-23.77%</td><td>9.99</td><td>T+1</td><td class="up">+0.60%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>45</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AKOD" target="_blank" rel="noopener"><strong>KOD</strong></a></td><td>表A</td><td>2026-10-01</td><td class="down">-4.27%</td><td>98.95</td><td>T+1</td><td class="up">+0.50%</td><td></td></tr>
+<tr><td>46</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ABLZE" target="_blank" rel="noopener"><strong>BLZE</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-11.63%</td><td>14.43</td><td>T+1</td><td class="up">+0.49%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>47</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AGIW" target="_blank" rel="noopener"><strong>GIW</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="up">+0.10%</td><td>10.21</td><td>T+5</td><td class="up">+0.20%</td><td></td></tr>
+<tr><td>48</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ACRCT" target="_blank" rel="noopener"><strong>CRCT</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-1.99%</td><td>6.53</td><td>T+2</td><td class="up">+0.15%</td><td></td></tr>
+<tr><td>49</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AACLS" target="_blank" rel="noopener"><strong>ACLS</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-8.84%</td><td>147.91</td><td>T+1</td><td class="up">+0.09%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>50</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AVECO" target="_blank" rel="noopener"><strong>VECO</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-8.89%</td><td>57.38</td><td>T+2</td><td class="up">+0.00%</td><td><span style="color:#c00;font-weight:bold">冲高回落</span></td></tr>
+<tr><td>51</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3ATTEC" target="_blank" rel="noopener"><strong>TTEC</strong></a></td><td>表B</td><td>2026-10-01</td><td class="down">-2.01%</td><td>1.49</td><td>T+1</td><td class="up">+0.00%</td><td></td></tr>
+<tr><td>52</td><td><a href="https://www.tradingview.com/chart/?symbol=NASDAQ%3AMGLD" target="_blank" rel="noopener"><strong>MGLD</strong></a></td><td>未分来源</td><td>2026-10-02</td><td class="down">-0.49%</td><td>2.03</td><td>T+1</td><td class="up">-0.00%</td><td></td></tr>
 </table>
 </div>
-<p class="meta">共 53 只入选，有效 52 只（SLP 已退市，记数据缺失）。</p>
+<p class="meta">点击股票代码可在 TradingView 查看K线走势（外部免费看盘）。</p>
+</section>
+
+<section>
+<h2>5日走势（T+1=100指数化）</h2>
+<p class="meta">红色虚线为 T+3。线末端编号对应上表序号。</p>
+<h3>入选日 2026-09-30（12只，T+1=100）</h3>
+<svg viewBox="0 0 900 320" style="width:100%;max-width:900px">
+<line x1="50" y1="290.0" x2="780" y2="290.0" stroke="#eee"/>
+<text x="44" y="294.0" font-size="10" text-anchor="end" fill="#888">78</text>
+<line x1="50" y1="155.0" x2="780" y2="155.0" stroke="#eee"/>
+<text x="44" y="159.0" font-size="10" text-anchor="end" fill="#888">97</text>
+<line x1="50" y1="20.0" x2="780" y2="20.0" stroke="#eee"/>
+<text x="44" y="24.0" font-size="10" text-anchor="end" fill="#888">115</text>
+<line x1="50" y1="130.5" x2="780" y2="130.5" stroke="#999" stroke-dasharray="4,4"/>
+<text x="50.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+1</text>
+<text x="232.5" y="312" font-size="10" text-anchor="middle" fill="#888">T+2</text>
+<text x="415.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+3</text>
+<text x="597.5" y="312" font-size="10" text-anchor="middle" fill="#888">T+4</text>
+<text x="780.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+5</text>
+<line x1="415.0" y1="20" x2="415.0" y2="290" stroke="red" stroke-dasharray="5,5" opacity="0.5"/>
+<polyline points="50.0,130.5 232.5,121.9 415.0,28.2 597.5,76.5 780.0,70.8" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="784.0" y="74.8" font-size="10" fill="#1f77b4">1</text>
+<polyline points="50.0,130.5 232.5,258.1 415.0,276.9 597.5,284.4 780.0,269.4" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="784.0" y="273.4" font-size="10" fill="#ff7f0e">2</text>
+<polyline points="50.0,130.5 232.5,92.4 415.0,33.5 597.5,97.2 780.0,137.1" fill="none" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="784.0" y="141.1" font-size="10" fill="#2ca02c">3</text>
+<polyline points="50.0,130.5 232.5,128.1 415.0,66.2 597.5,210.4 780.0,253.4" fill="none" stroke="#d62728" stroke-width="1.5"/>
+<text x="784.0" y="257.4" font-size="10" fill="#d62728">4</text>
+<polyline points="50.0,130.5 232.5,99.0 415.0,106.5 597.5,109.4 780.0,116.0" fill="none" stroke="#9467bd" stroke-width="1.5"/>
+<text x="784.0" y="120.0" font-size="10" fill="#9467bd">5</text>
+<polyline points="50.0,130.5 232.5,95.3 415.0,110.4 597.5,116.4 780.0,138.5" fill="none" stroke="#8c564b" stroke-width="1.5"/>
+<text x="784.0" y="142.5" font-size="10" fill="#8c564b">6</text>
+<polyline points="50.0,130.5 232.5,166.4 415.0,131.9 597.5,127.6 780.0,159.2" fill="none" stroke="#e377c2" stroke-width="1.5"/>
+<text x="784.0" y="163.2" font-size="10" fill="#e377c2">7</text>
+<polyline points="50.0,130.5 232.5,96.6 415.0,116.2 597.5,115.9 780.0,121.0" fill="none" stroke="#7f7f7f" stroke-width="1.5"/>
+<text x="784.0" y="125.0" font-size="10" fill="#7f7f7f">8</text>
+<polyline points="50.0,130.5 232.5,136.2 415.0,105.4 597.5,130.5 780.0,187.8" fill="none" stroke="#bcbd22" stroke-width="1.5"/>
+<text x="784.0" y="191.8" font-size="10" fill="#bcbd22">9</text>
+<polyline points="50.0,130.5 232.5,146.1 415.0,162.2 597.5,157.4 780.0,157.6" fill="none" stroke="#17becf" stroke-width="1.5"/>
+<text x="784.0" y="161.6" font-size="10" fill="#17becf">10</text>
+<polyline points="50.0,130.5 232.5,131.0 415.0,134.5 597.5,194.1 780.0,196.1" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="784.0" y="200.1" font-size="10" fill="#1f77b4">11</text>
+<polyline points="50.0,130.5 232.5,127.9 415.0,96.2 597.5,202.4 780.0,195.6" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="784.0" y="199.6" font-size="10" fill="#ff7f0e">12</text>
+<text x="788" y="20.0" font-size="10" fill="#1f77b4">1.PACB</text>
+<text x="788" y="36.0" font-size="10" fill="#ff7f0e">2.VIOT</text>
+<text x="788" y="52.0" font-size="10" fill="#2ca02c">3.MRVI</text>
+<text x="788" y="68.0" font-size="10" fill="#d62728">4.TWST</text>
+<text x="788" y="84.0" font-size="10" fill="#9467bd">5.ASYS</text>
+<text x="788" y="100.0" font-size="10" fill="#8c564b">6.KLIC</text>
+<text x="788" y="116.0" font-size="10" fill="#e377c2">7.CURX</text>
+<text x="788" y="132.0" font-size="10" fill="#7f7f7f">8.SIF</text>
+<text x="788" y="148.0" font-size="10" fill="#bcbd22">9.SENS</text>
+<text x="788" y="164.0" font-size="10" fill="#17becf">10.SPSC</text>
+<text x="788" y="180.0" font-size="10" fill="#1f77b4">11.IOVA</text>
+<text x="788" y="196.0" font-size="10" fill="#ff7f0e">12.AGEN</text>
+</svg><h3>入选日 2026-10-01（16只，T+1=100）</h3>
+<svg viewBox="0 0 900 320" style="width:100%;max-width:900px">
+<line x1="50" y1="290.0" x2="780" y2="290.0" stroke="#eee"/>
+<text x="44" y="294.0" font-size="10" text-anchor="end" fill="#888">48</text>
+<line x1="50" y1="155.0" x2="780" y2="155.0" stroke="#eee"/>
+<text x="44" y="159.0" font-size="10" text-anchor="end" fill="#888">78</text>
+<line x1="50" y1="20.0" x2="780" y2="20.0" stroke="#eee"/>
+<text x="44" y="24.0" font-size="10" text-anchor="end" fill="#888">107</text>
+<line x1="50" y1="53.1" x2="780" y2="53.1" stroke="#999" stroke-dasharray="4,4"/>
+<text x="50.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+1</text>
+<text x="232.5" y="312" font-size="10" text-anchor="middle" fill="#888">T+2</text>
+<text x="415.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+3</text>
+<text x="597.5" y="312" font-size="10" text-anchor="middle" fill="#888">T+4</text>
+<text x="780.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+5</text>
+<line x1="415.0" y1="20" x2="415.0" y2="290" stroke="red" stroke-dasharray="5,5" opacity="0.5"/>
+<polyline points="50.0,53.1 232.5,62.0 415.0,287.8 597.5,220.3 780.0,229.7" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="784.0" y="233.7" font-size="10" fill="#1f77b4">1</text>
+<polyline points="50.0,53.1 232.5,90.9 415.0,69.9 597.5,80.4 780.0,114.0" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="784.0" y="118.0" font-size="10" fill="#ff7f0e">2</text>
+<polyline points="50.0,53.1 232.5,34.1 415.0,43.4 597.5,41.2 780.0,31.2" fill="none" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="784.0" y="35.2" font-size="10" fill="#2ca02c">3</text>
+<polyline points="50.0,53.1 232.5,36.2 415.0,36.2 597.5,29.3 780.0,46.2" fill="none" stroke="#d62728" stroke-width="1.5"/>
+<text x="784.0" y="50.2" font-size="10" fill="#d62728">4</text>
+<polyline points="50.0,53.1 232.5,132.8 415.0,150.5 597.5,132.8 780.0,150.5" fill="none" stroke="#9467bd" stroke-width="1.5"/>
+<text x="784.0" y="154.5" font-size="10" fill="#9467bd">5</text>
+<polyline points="50.0,53.1 232.5,24.9 415.0,35.6 597.5,34.3 780.0,39.7" fill="none" stroke="#8c564b" stroke-width="1.5"/>
+<text x="784.0" y="43.7" font-size="10" fill="#8c564b">6</text>
+<polyline points="50.0,53.1 232.5,51.4 415.0,47.8 597.5,60.6 780.0,61.8" fill="none" stroke="#e377c2" stroke-width="1.5"/>
+<text x="784.0" y="65.8" font-size="10" fill="#e377c2">7</text>
+<polyline points="50.0,53.1 232.5,62.4 415.0,66.1 597.5,79.5 780.0,97.8" fill="none" stroke="#7f7f7f" stroke-width="1.5"/>
+<text x="784.0" y="101.8" font-size="10" fill="#7f7f7f">8</text>
+<polyline points="50.0,53.1 232.5,63.9 415.0,39.3 597.5,79.2 780.0,86.1" fill="none" stroke="#bcbd22" stroke-width="1.5"/>
+<text x="784.0" y="90.1" font-size="10" fill="#bcbd22">9</text>
+<polyline points="50.0,53.1 232.5,57.7 415.0,59.5 597.5,63.5 780.0,98.8" fill="none" stroke="#17becf" stroke-width="1.5"/>
+<text x="784.0" y="102.8" font-size="10" fill="#17becf">10</text>
+<polyline points="50.0,53.1 232.5,73.4 415.0,68.7 597.5,62.5 780.0,67.2" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="784.0" y="71.2" font-size="10" fill="#1f77b4">11</text>
+<polyline points="50.0,53.1 232.5,55.7 415.0,59.0 597.5,64.2 780.0,64.5" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="784.0" y="68.5" font-size="10" fill="#ff7f0e">12</text>
+<polyline points="50.0,53.1 232.5,67.8 415.0,73.6 597.5,61.9 780.0,53.1" fill="none" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="784.0" y="57.1" font-size="10" fill="#2ca02c">13</text>
+<polyline points="50.0,53.1 232.5,56.6 415.0,62.9 597.5,64.3 780.0,61.5" fill="none" stroke="#d62728" stroke-width="1.5"/>
+<text x="784.0" y="65.5" font-size="10" fill="#d62728">14</text>
+<polyline points="50.0,53.1 232.5,56.2 415.0,63.3 597.5,69.4 780.0,54.0" fill="none" stroke="#9467bd" stroke-width="1.5"/>
+<text x="784.0" y="58.0" font-size="10" fill="#9467bd">15</text>
+<polyline points="50.0,53.1 232.5,53.1 415.0,63.1 597.5,26.6 780.0,26.6" fill="none" stroke="#8c564b" stroke-width="1.5"/>
+<text x="784.0" y="30.6" font-size="10" fill="#8c564b">16</text>
+<text x="788" y="20.0" font-size="10" fill="#1f77b4">1.XRPN</text>
+<text x="788" y="36.0" font-size="10" fill="#ff7f0e">2.REBN</text>
+<text x="788" y="52.0" font-size="10" fill="#2ca02c">3.RCEL</text>
+<text x="788" y="68.0" font-size="10" fill="#d62728">4.NTWK</text>
+<text x="788" y="84.0" font-size="10" fill="#9467bd">5.QSI</text>
+<text x="788" y="100.0" font-size="10" fill="#8c564b">6.FOSL</text>
+<text x="788" y="116.0" font-size="10" fill="#e377c2">7.TXN</text>
+<text x="788" y="132.0" font-size="10" fill="#7f7f7f">8.KLIC</text>
+<text x="788" y="148.0" font-size="10" fill="#bcbd22">9.BB</text>
+<text x="788" y="164.0" font-size="10" fill="#17becf">10.ASYS</text>
+<text x="788" y="180.0" font-size="10" fill="#1f77b4">11.USIO</text>
+<text x="788" y="196.0" font-size="10" fill="#ff7f0e">12.CAKE</text>
+<text x="788" y="212.0" font-size="10" fill="#2ca02c">13.VIOT</text>
+<text x="788" y="228.0" font-size="10" fill="#d62728">14.CRCT</text>
+<text x="788" y="244.0" font-size="10" fill="#9467bd">15.KOD</text>
+<text x="788" y="260.0" font-size="10" fill="#8c564b">16.TTEC</text>
+</svg><h3>入选日 2026-10-02（24只，T+1=100）</h3>
+<svg viewBox="0 0 900 320" style="width:100%;max-width:900px">
+<line x1="50" y1="290.0" x2="780" y2="290.0" stroke="#eee"/>
+<text x="44" y="294.0" font-size="10" text-anchor="end" fill="#888">44</text>
+<line x1="50" y1="155.0" x2="780" y2="155.0" stroke="#eee"/>
+<text x="44" y="159.0" font-size="10" text-anchor="end" fill="#888">79</text>
+<line x1="50" y1="20.0" x2="780" y2="20.0" stroke="#eee"/>
+<text x="44" y="24.0" font-size="10" text-anchor="end" fill="#888">114</text>
+<line x1="50" y1="74.9" x2="780" y2="74.9" stroke="#999" stroke-dasharray="4,4"/>
+<text x="50.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+1</text>
+<text x="232.5" y="312" font-size="10" text-anchor="middle" fill="#888">T+2</text>
+<text x="415.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+3</text>
+<text x="597.5" y="312" font-size="10" text-anchor="middle" fill="#888">T+4</text>
+<text x="780.0" y="312" font-size="10" text-anchor="middle" fill="#888">T+5</text>
+<line x1="415.0" y1="20" x2="415.0" y2="290" stroke="red" stroke-dasharray="5,5" opacity="0.5"/>
+<polyline points="50.0,74.9 232.5,24.3 415.0,120.8 597.5,149.2 780.0,150.8" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="784.0" y="154.8" font-size="10" fill="#1f77b4">1</text>
+<polyline points="50.0,74.9 232.5,267.4 415.0,209.9 597.5,217.9 780.0,288.3" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="784.0" y="292.3" font-size="10" fill="#ff7f0e">2</text>
+<polyline points="50.0,74.9 232.5,105.2 415.0,136.2 597.5,135.2 780.0,119.8" fill="none" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="784.0" y="123.8" font-size="10" fill="#2ca02c">3</text>
+<polyline points="50.0,74.9 232.5,145.9 415.0,167.0 597.5,173.7 780.0,159.3" fill="none" stroke="#d62728" stroke-width="1.5"/>
+<text x="784.0" y="163.3" font-size="10" fill="#d62728">4</text>
+<polyline points="50.0,74.9 232.5,77.2 415.0,78.0 597.5,64.4 780.0,54.6" fill="none" stroke="#9467bd" stroke-width="1.5"/>
+<text x="784.0" y="58.6" font-size="10" fill="#9467bd">5</text>
+<polyline points="50.0,74.9 232.5,82.4 415.0,80.7 597.5,72.6 780.0,76.1" fill="none" stroke="#8c564b" stroke-width="1.5"/>
+<text x="784.0" y="80.1" font-size="10" fill="#8c564b">6</text>
+<polyline points="50.0,74.9 232.5,60.1 415.0,64.2 597.5,64.6 780.0,52.9" fill="none" stroke="#e377c2" stroke-width="1.5"/>
+<text x="784.0" y="56.9" font-size="10" fill="#e377c2">7</text>
+<polyline points="50.0,74.9 232.5,74.9 415.0,69.3 597.5,83.0 780.0,89.8" fill="none" stroke="#7f7f7f" stroke-width="1.5"/>
+<text x="784.0" y="93.8" font-size="10" fill="#7f7f7f">8</text>
+<polyline points="50.0,74.9 232.5,76.2 415.0,82.2 597.5,73.5 780.0,61.5" fill="none" stroke="#bcbd22" stroke-width="1.5"/>
+<text x="784.0" y="65.5" font-size="10" fill="#bcbd22">9</text>
+<polyline points="50.0,74.9 232.5,55.8 415.0,65.4 597.5,96.0 780.0,74.9" fill="none" stroke="#17becf" stroke-width="1.5"/>
+<text x="784.0" y="78.9" font-size="10" fill="#17becf">10</text>
+<polyline points="50.0,74.9 232.5,78.5 415.0,70.2 597.5,66.8 780.0,54.7" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="784.0" y="58.7" font-size="10" fill="#1f77b4">11</text>
+<polyline points="50.0,74.9 232.5,53.9 415.0,88.0 597.5,93.9 780.0,82.1" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="784.0" y="86.1" font-size="10" fill="#ff7f0e">12</text>
+<polyline points="50.0,74.9 232.5,78.9 415.0,75.8 597.5,70.9 780.0,70.3" fill="none" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="784.0" y="74.3" font-size="10" fill="#2ca02c">13</text>
+<polyline points="50.0,74.9 232.5,76.4 415.0,79.9 597.5,109.7 780.0,104.5" fill="none" stroke="#d62728" stroke-width="1.5"/>
+<text x="784.0" y="108.5" font-size="10" fill="#d62728">14</text>
+<polyline points="50.0,74.9 232.5,77.7 415.0,82.1 597.5,82.4 780.0,77.0" fill="none" stroke="#9467bd" stroke-width="1.5"/>
+<text x="784.0" y="81.0" font-size="10" fill="#9467bd">15</text>
+<polyline points="50.0,74.9 232.5,78.1 415.0,89.6 597.5,105.2 780.0,101.0" fill="none" stroke="#8c564b" stroke-width="1.5"/>
+<text x="784.0" y="105.0" font-size="10" fill="#8c564b">16</text>
+<polyline points="50.0,74.9 232.5,74.9 415.0,74.9 597.5,75.2 780.0,74.4" fill="none" stroke="#e377c2" stroke-width="1.5"/>
+<text x="784.0" y="78.4" font-size="10" fill="#e377c2">17</text>
+<polyline points="50.0,74.9 232.5,73.6 415.0,77.8 597.5,75.5 780.0,67.3" fill="none" stroke="#7f7f7f" stroke-width="1.5"/>
+<text x="784.0" y="71.3" font-size="10" fill="#7f7f7f">18</text>
+<polyline points="50.0,74.9 232.5,77.1 415.0,79.0 597.5,99.4 780.0,107.7" fill="none" stroke="#bcbd22" stroke-width="1.5"/>
+<text x="784.0" y="111.7" font-size="10" fill="#bcbd22">19</text>
+<polyline points="50.0,74.9 232.5,74.9 415.0,75.3 597.5,75.3 780.0,74.2" fill="none" stroke="#17becf" stroke-width="1.5"/>
+<text x="784.0" y="78.2" font-size="10" fill="#17becf">20</text>
+<polyline points="50.0,74.9 232.5,80.2 415.0,81.4 597.5,79.1 780.0,79.6" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="784.0" y="83.6" font-size="10" fill="#1f77b4">21</text>
+<polyline points="50.0,74.9 232.5,78.0 415.0,85.4 597.5,98.7 780.0,95.3" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="784.0" y="99.3" font-size="10" fill="#ff7f0e">22</text>
+<polyline points="50.0,74.9 232.5,79.3 415.0,93.8 597.5,107.9 780.0,102.3" fill="none" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="784.0" y="106.3" font-size="10" fill="#2ca02c">23</text>
+<polyline points="50.0,74.9 232.5,74.9 415.0,71.1 597.5,74.9 780.0,71.1" fill="none" stroke="#d62728" stroke-width="1.5"/>
+<text x="784.0" y="75.1" font-size="10" fill="#d62728">24</text>
+<text x="788" y="20.0" font-size="10" fill="#1f77b4">1.CVM</text>
+<text x="788" y="36.0" font-size="10" fill="#ff7f0e">2.XRPN</text>
+<text x="788" y="52.0" font-size="10" fill="#2ca02c">3.AZTA</text>
+<text x="788" y="68.0" font-size="10" fill="#d62728">4.TWST</text>
+<text x="788" y="84.0" font-size="10" fill="#9467bd">5.AMPL</text>
+<text x="788" y="100.0" font-size="10" fill="#8c564b">6.RCEL</text>
+<text x="788" y="116.0" font-size="10" fill="#e377c2">7.FTNT</text>
+<text x="788" y="132.0" font-size="10" fill="#7f7f7f">8.NTWK</text>
+<text x="788" y="148.0" font-size="10" fill="#bcbd22">9.ESTC</text>
+<text x="788" y="164.0" font-size="10" fill="#17becf">10.REBN</text>
+<text x="788" y="180.0" font-size="10" fill="#1f77b4">11.ELF</text>
+<text x="788" y="196.0" font-size="10" fill="#ff7f0e">12.BB</text>
+<text x="788" y="212.0" font-size="10" fill="#2ca02c">13.PRCH</text>
+<text x="788" y="228.0" font-size="10" fill="#d62728">14.ASYS</text>
+<text x="788" y="244.0" font-size="10" fill="#9467bd">15.CAKE</text>
+<text x="788" y="260.0" font-size="10" fill="#8c564b">16.KLIC</text>
+<text x="788" y="276.0" font-size="10" fill="#e377c2">17.TWOD</text>
+</svg>
 </section>
 
 <section>
 <h2>分来源统计</h2>
 <ul>
-<li><strong>表A（策略池来源）</strong>：入选13只（有效13只）、上涨6只、平均涨幅-0.83%</li>
-<li><strong>表B（复盘报告来源）</strong>：入选3只（有效3只）、上涨1只、平均涨幅-4.47%</li>
-<li><strong>未分来源（10-05 前格式）</strong>：入选37只（有效36只）、上涨12只、平均涨幅-5.23%</li>
+<li><strong>表A</strong>：入选13只、T+5上涨6只、平均涨幅-0.83%；+5%机会8只、+10%机会3只</li>
+<li><strong>表B</strong>：入选3只、T+5上涨1只、平均涨幅-4.47%；+5%机会2只、+10%机会1只</li>
+<li><strong>未分来源</strong>：入选36只、T+5上涨12只、平均涨幅-5.23%；+5%机会16只、+10%机会8只</li>
 </ul>
 </section>
 
 <section>
 <h2>月度累计（自 2026-10-05 起，本期为第一期）</h2>
 <ul>
-<li><strong>表A（策略池来源）</strong>：累计入选13只（有效13只）、累计上涨6只、平均涨幅-0.83%</li>
-<li><strong>表B（复盘报告来源）</strong>：累计入选3只（有效3只）、累计上涨1只、平均涨幅-4.47%</li>
-<li><strong>未分来源（10-05 前格式）</strong>：累计入选37只（有效36只）、累计上涨12只、平均涨幅-5.23%</li>
+<li><strong>表A</strong>：累计入选13只、T+5上涨6只、平均涨幅-0.83%；+5%机会8只、+10%机会3只</li>
+<li><strong>表B</strong>：累计入选3只、T+5上涨1只、平均涨幅-4.47%；+5%机会2只、+10%机会1只</li>
+<li><strong>未分来源</strong>：累计入选36只、T+5上涨12只、平均涨幅-5.23%；+5%机会16只、+10%机会8只</li>
 </ul>
-<p class="meta">月度累计按周累加：累计只数/上涨只数直接相加，平均涨幅 = 全部有效样本涨跌幅之和 / 有效样本数。</p>
+<p class="meta">月度累计按周累加。</p>
 </section>
 
 <footer>
