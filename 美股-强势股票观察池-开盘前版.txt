@@ -1,0 +1,40 @@
+# 美股-强势股票观察池 · 2026-10-15（开盘前版）
+# 表A：20交易日(2026-09-18~2026-10-15)四策略池去重565只→按10日>5日>3日>当日>0筛选→32只
+# 表B：复盘报告(2026-10-15,partial,44/44样本)去重25只→同条件筛选→1只
+# 排序：各表内按10日涨幅从高到低；价格为10-15收盘（程序库）
+# 用法：下载此txt→打开tradekit网页→数据浏览页点"追加"→选文件，即调入系统看K线分析
+# ── 策略池来源 ──
+ENSC
+FIGS
+MRNA
+BLKB
+DCBO
+BRCC
+PRGO
+HALO
+NTWK
+FF
+SLDE
+BUUU
+WHF
+GCT
+ANF
+MANH
+PAYC
+VEEV
+AOUT
+PD
+WIX
+MDT
+NIQ
+TAK
+XGN
+THC
+HRTG
+YEXT
+AII
+CRL
+OPLN
+WDAY
+# ── 复盘报告来源 ──
+CXT
