@@ -1,0 +1,26 @@
+# 美股-强势股票观察池 · 2026-10-22（开盘前版）
+# 表A：策略池(2026-10-22 revision 20261023T023723711324Z-17d67ec0, observations.json A 源)去重→按10日>5日>3日>当日>0筛选→18只
+# 表B：复盘报告(2026-10-22,44/44样本完整, observations.json B 源)去重→按10日>5日>3日>当日>0筛选→1只
+# 排序：各表内按10日涨幅从高到低；价格为10-22收盘（程序库）
+# 用法：下载此txt→打开tradekit网页→数据浏览页点"追加"→选文件，即调入系统看K线分析
+# ── 策略池来源 ──
+DXC
+NTWK
+HAS
+INTA
+PAYC
+WEST
+PED
+VEEV
+GMAB
+TFX
+TAK
+CURX
+INSP
+APOG
+AII
+JVA
+OPLN
+SHEL
+# ── 复盘报告来源 ──
+VRSK
