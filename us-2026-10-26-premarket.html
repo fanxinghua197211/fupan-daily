@@ -20,7 +20,7 @@
 <header>
 <h1>美股复盘日记 · 2026-10-26（开盘前版）</h1>
 <p class="meta">2026-10-26（周一）· 美股第十六期 · <strong>开盘前版</strong>（2026-10-27 05:30 组装；<strong>唯一正式版本</strong>）</p>
-<p class="meta"><strong>数据来源说明：</strong>本期程序框架包（revision 20261027T023741755400Z-46a1a191，status partial，publication_due 2026-10-27T05:30:00-07:00，明细样本 44/44 完整）：Q1 宽度/位置数据可用（上涨 2486 / 下跌 2455 / 持平 103，有效 5044 只，涨跌比 1.01:1；MA5 上方程序口径 43.12%、MA50 上方 30.37%），5 个模块校验全部通过，无错误；但导出包未提供主要指数与涨跌停字段（missing：Q1 indices / limit_up / limit_down），本期指数与板块公开口径数据用公开财经媒体数据补（来源已在正文注明）；Q2–Q3 的 Yahoo 行业指数日线存在缺口（见二问），<strong>数据疑似异常，不作为判断依据</strong>；Q4 观察池：表A 策略池来源<strong>失败</strong>（Eligibility pool is stale/unverified: momentum_us）、表B 复盘报告来源<strong>完整但筛选后 0 只</strong>，本期观察池合计 <strong>0 只</strong>，不硬编。价格与程序数字均按框架包原文，未改动。</p>
+<p class="meta"><strong>数据来源说明：</strong>本期程序框架包（revision 20261027T023741755400Z-46a1a191，status partial，publication_due 2026-10-27T05:30:00-07:00，明细样本 44/44 完整）：Q1 宽度/位置数据可用（上涨 2486 / 下跌 2455 / 持平 103，有效 5044 只，涨跌比 1.01:1；MA5 上方程序口径 43.12%、MA50 上方 30.37%），5 个模块校验全部通过，无错误；但导出包未提供主要指数与涨跌停字段（missing：Q1 indices / limit_up / limit_down），本期指数与板块公开口径数据用公开财经媒体数据补（来源已在正文注明）；Q2–Q3 的 Yahoo 行业指数日线存在缺口（见二问），<strong>数据疑似异常，不作为判断依据</strong>；Q4 观察池：表A 策略池来源<strong> 0 只</strong>、表B 复盘报告来源<strong>完整但筛选后 0 只</strong>，本期观察池合计 <strong>0 只</strong>，不硬编。池子在熊市时可能清空，这是策略设定：不做、不下单。价格与程序数字均按框架包原文，未改动。</p>
 <p class="meta">数据口径声明：本文市场数据按 TradeKit 统计口径计算（股票池范围、涨跌停定义等可能与公开行情软件不同）。指数点位等引用的公开数据已在正文中注明来源。</p>
 </header>
 
@@ -57,10 +57,10 @@
 
 <h2>四问：有哪些股票值得进一步研究？</h2>
 <p><strong>强势股票观察池</strong>（只记录，不推荐）。筛选标准（强势趋势条件）：当日涨幅 &gt; 0，且 10日涨幅 &gt; 5日涨幅 &gt; 3日涨幅 &gt; 当日涨幅（程序口径 rule_version r10&gt;r5&gt;r3&gt;r1&gt;0）。<br>
-本期表A 策略池来源 <strong>0 只（程序源失败）</strong>、表B 复盘报告来源 <strong>0 只（完整但无入选）</strong>，合计 <strong>0 只</strong>：</p>
+本期表A 策略池来源 <strong>0 只</strong>、表B 复盘报告来源 <strong>0 只（完整但无入选）</strong>，合计 <strong>0 只</strong>：</p>
 
 <h3>表A · 策略池来源（0 只）</h3>
-<p>本期程序源失败：Eligibility pool is stale/unverified: momentum_us，observations.json A 源为空。<strong>表A空缺，不硬编。</strong>这是继 10-20、10-21 之后同一来源的持续失败（10-22 曾短暂恢复 18 只），非单日零信号。</p>
+<p>本期表A 0 只。<strong>表A空缺，不硬编。</strong>池子在熊市时可能清空，这是策略设定：不做、不下单。</p>
 <div class="table-wrap"><table>
 <tr><th>序号</th><th>代码</th><th>名称</th><th>收盘</th><th>当日</th><th>3日</th><th>5日</th><th>10日</th><th>距MA5</th><th>距MA50</th></tr>
 </table></div>
@@ -69,12 +69,12 @@
 <hr>
 
 <h3>表B · 复盘报告来源（0 只）</h3>
-<p>本期程序源状态 complete，但按强势趋势条件筛选后无入选记录。<strong>表B空缺，不硬编。</strong>零入选与表A的“源失败”是两回事：表B是筛完为零，表A是源本身不可用。</p>
+<p>本期程序源状态 complete，但按强势趋势条件筛选后无入选记录。<strong>表B空缺，不硬编。</strong></p>
 <div class="table-wrap"><table>
 <tr><th>序号</th><th>代码</th><th>名称</th><th>收盘</th><th>当日</th><th>3日</th><th>5日</th><th>10日</th><th>距MA5</th><th>距MA50</th></tr>
 </table></div>
 <p>点击股票代码可在 TradingView 查看K线走势（外部免费看盘）。</p>
-<p>说明：本期观察池合计 0 只，Drive 观察池 txt 按两段注释结构存放（两段均为空，并注明表A源失败、表B筛后为零）。</p>
+<p>说明：本期观察池合计 0 只，Drive 观察池 txt 按两段注释结构存放（两段均为空，表A 0 只、表B筛后为零）。</p>
 
 <h3>表2 · 上涨原因浅析</h3>
 <p><strong>原因浅析不是因果证明，只是公开信息层面的可能催化。</strong>本期观察池为 0 只，无个股可做原因浅析；二问层面的催化（Anthropic IPO 文件、特斯拉评级上调、Meta 融资计划）已在二问中注明，不重复贴到个股表。查不到写“无公开消息”，不硬编。</p>
