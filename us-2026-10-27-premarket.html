@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JM18N2HPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3JM18N2HPF');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股复盘日记 · 2026-10-27（开盘前版）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><a href="index.html">← 返回复盘日记</a></nav>
+<header>
+<h1>美股复盘日记 · 2026-10-27（开盘前版）</h1>
+<p class="meta">2026-10-27（周二）· 美股第十七期 · <strong>开盘前版</strong>（2026-10-28 05:30 组装；<strong>唯一正式版本</strong>）</p>
+<p class="meta"><strong>数据来源说明：</strong>本期程序框架包（revision 20261028T023751868424Z-cd41d63d，status partial，publication_due 2026-10-28T05:30:00-07:00，明细样本 44/44 完整）：Q1 宽度/位置数据可用（上涨 3093 / 下跌 1916 / 持平 177，有效 5186 只，涨跌比 1.61:1；MA5 上方程序口径 54.13%、MA50 上方 31.81%），5 个模块校验全部通过，无错误；但导出包未提供主要指数与涨跌停字段（missing：Q1 indices / limit_up / limit_down），本期指数数据用公开财经媒体数据补（来源已在正文注明），涨跌停本期无公开口径可补，不硬填；Q2–Q3 的 Yahoo 行业指数日线存在缺口（见二问），<strong>数据疑似异常，不作为判断依据</strong>；Q4 观察池：表A 策略池来源<strong> 0 只</strong>（来源状态 stale/unverified：momentum_us）、表B 复盘报告来源<strong>完整但筛选后 0 只</strong>，本期观察池合计 <strong>0 只</strong>，不硬编。池子在熊市时可能清空，这是策略设定：不做、不下单。价格与程序数字均按框架包原文，未改动。</p>
+<p class="meta">数据口径声明：本文市场数据按 TradeKit 统计口径计算（股票池范围、涨跌停定义等可能与公开行情软件不同）。指数点位等引用的公开数据已在正文中注明来源。</p>
+</header>
+
+<div class="disclaimer">
+<strong>声明：</strong>本篇只摆数据与结论，<strong>仅做数据记录，不构成投资建议</strong>。
+</div>
+
+<h2>一问：今天市场能不能玩？</h2>
+<ul>
+<li>指数（公开口径，据 Market Briefer、eOption、The Evergreen Edit、ChainCatcher，多家一致）：标普 500 <strong>+0.60%</strong> 收 7,722.60、纳指 <strong>+1.18%</strong> 收 26,477.81、道指 <strong>+0.03%</strong> 收 52,377.57、罗素 2000 <strong>+1.16%</strong> 收 2,818.87——指数全涨，但纳指与道指之间差 1.15 个百分点，分化明显</li>
+<li>宽度（程序口径）：上涨 3093 / 下跌 1916 / 持平 177，有效 5186 只，涨跌比 <strong>1.61:1</strong>，上涨家数占比 59.64%；涨超 5% 的 645 只——宽度较前一日（1.01:1）明显改善，属偏强的日子</li>
+<li>位置（程序口径）：MA5 上方 <strong>2825 只</strong>（程序 pct 54.13%，分母为市场总数 5219 只；有效 4995 只中占 56.6%）、MA50 上方 <strong>1660 只</strong>（程序 pct 31.81%；有效 4942 只中占 33.6%）——短期过半数站上 MA5，但中长期仅约三成在 MA50 上方，位置仍弱</li>
+<li>驱动（公开口径，据 Market Briefer、美联社转述）：半导体约 <strong>+3%</strong> 领涨，AI 链延续前一日反弹——博通 <strong>+4.00%</strong>（10-26 公布的 630 亿美元 Anthropic 算力融资方案）、英伟达 +0.9%、AMD +5.45%、Marvell +4.19%、英特尔 +3.61%；新云 / 存储 / 光通信同步走强（Nebius +11.22%、Credo +10.77%、Astera Labs +10.47%、西部数据 +6.95%，据 ChainCatcher）；反向：波音季报亏损后跌近 11%，拖住道指；10 月消费者信心跳升至 91.7（前值修正后 84.2，预期约 81）</li>
+<li>待验证：美联储议息决议在次日（10-28）美东 14:00，微软与 Alphabet 在同日收盘后公布财报——本轮反弹的乐观情绪仍属“有待验证”</li>
+</ul>
+<div class="conclusion"><strong>结论：</strong>指数全涨、宽度 1.61:1 改善，是偏强的一日，但涨幅集中于半导体与 AI 链（纳指 +1.18% 对道指 +0.03%），且 MA50 上方仅约三成，中长期位置仍弱；叠加次日美联储决议与大科技财报在即。<br><strong>参与判断：当前市场环境适合谨慎参与。</strong></div>
+
+<h2>二问：今天市场热度集中在哪里？</h2>
+<ul>
+<li><strong>程序行业温度数据疑似异常，不作为判断依据</strong>：Yahoo 行业指数日线缺口（框架包 issues：Yahoo Industry 近期源日线缺口 2026-10-27），程序 TOP3 为百货商店单日 <strong>+95.21%</strong>（成员仅 4 只，内部 3 涨 0 跌 1 平，且涨超 5% 的 0 只——指数涨幅与成员表现完全对不上）、可再生能源公用事业 <strong>+51.48%</strong>（成员 19 只，内部 14 涨 5 跌）、博彩 <strong>+12.55%</strong>（成员 12 只，内部仅 3 涨 9 跌，且涨超 5% 的 0 只）——单日涨幅与板块内涨跌家数对不上，且与 10-21（百货 +101.7%、可再生能源 +53.4%）、10-22（百货 +110.7%、可再生能源 +50.1%）、10-26（百货 +93.24%、可再生能源 +43.72%）同款异常连续出现，均为指数重设伪影</li>
+<li>公开口径领涨（据 Market Briefer、ChainCatcher）：<strong>半导体 / AI 算力链最强</strong>（半导体约 +3%；新云、存储、光通信个股普涨，见一问）；罗素 2000 +1.16%，小盘亦跟随上涨</li>
+<li>偏弱方向：道指仅 +0.03%，波音拖累是主因；公开口径未见明确的板块性普跌</li>
+<li>热度中心：Anthropic 算力融资方案（博通 630 亿美元方案，10-26 公布）继续发酵，资金回流 AI / 半导体链；但本周催化密集（美联储议息 10-28、微软 / Alphabet / 亚马逊等大科技财报），热度能否持续待财报与决议验证</li>
+</ul>
+<div class="conclusion"><strong>结论：</strong>热度在 AI / 半导体链反弹，小盘亦有跟随；程序口径下无可验证的强势板块。方向与前一日一致，属事件驱动的连续反弹，持续性待观察。</div>
+
+<h2>三问：行情是板块扩散，还是少数个股抱团？</h2>
+<ul>
+<li>程序扩散模块同样受 Yahoo 行业指数数据问题影响，<strong>不作为判断依据</strong>（程序给出的板块内部上涨比例为百货 75%、可再生能源 73.68%、博彩 25%、多元化公用事业 66.67%，均来自同一缺口数据源，且与指数涨幅自相矛盾）</li>
+<li>公开口径：指数层面纳指 +1.18% 对道指 +0.03%，涨幅高度集中于半导体与科技大票；但全市场程序宽度为 59.64% 上涨、涨超 5% 的 645 只，罗素 2000 +1.16%，扩散度较前一日（宽度 1.01:1）明显改善</li>
+<li>结构：半导体 / AI 链抱团涨（费半约 +3%、博通 / AMD / Marvell / 英特尔齐涨），波音单一个股拖累道指；小盘跟随，但典型个股的中长期位置（MA50 上方仅约三成）仍弱</li>
+</ul>
+<div class="conclusion"><strong>结论：</strong>非全面扩散——宽度较前日改善、小盘跟随，但涨幅仍高度集中于半导体与 AI 链，属“宽度改善、涨幅集中”的结构性反弹。</div>
+
+<h2>四问：有哪些股票值得进一步研究？</h2>
+<p><strong>强势股票观察池</strong>（只记录，不推荐）。筛选标准（强势趋势条件）：当日涨幅 &gt; 0，且 10日涨幅 &gt; 5日涨幅 &gt; 3日涨幅 &gt; 当日涨幅（程序口径 rule_version r10&gt;r5&gt;r3&gt;r1&gt;0）。<br>
+本期表A 策略池来源 <strong>0 只</strong>、表B 复盘报告来源 <strong>0 只（完整但无入选）</strong>，合计 <strong>0 只</strong>：</p>
+
+<h3>表A · 策略池来源（0 只）</h3>
+<p>本期表A 0 只。框架包给出的表A来源状态为 stale/unverified（momentum_us），不是完整筛选后的零信号；<strong>表A空缺，不硬编。</strong>池子在熊市时可能清空，这是策略设定：不做、不下单。</p>
+<div class="table-wrap"><table>
+<tr><th>序号</th><th>代码</th><th>名称</th><th>收盘</th><th>当日</th><th>3日</th><th>5日</th><th>10日</th><th>距MA5</th><th>距MA50</th></tr>
+</table></div>
+<p>点击股票代码可在 TradingView 查看K线走势（外部免费看盘）。</p>
+
+<hr>
+
+<h3>表B · 复盘报告来源（0 只）</h3>
+<p>本期程序源状态 complete（样本 44/44，质量合格 19 只），但按强势趋势条件筛选后无入选记录。<strong>表B空缺，不硬编。</strong></p>
+<div class="table-wrap"><table>
+<tr><th>序号</th><th>代码</th><th>名称</th><th>收盘</th><th>当日</th><th>3日</th><th>5日</th><th>10日</th><th>距MA5</th><th>距MA50</th></tr>
+</table></div>
+<p>点击股票代码可在 TradingView 查看K线走势（外部免费看盘）。</p>
+<p>说明：本期观察池合计 0 只，Drive 观察池 txt 按两段注释结构存放（两段均为空，表A 0 只、表B筛后为零）。</p>
+
+<h3>表2 · 上涨原因浅析</h3>
+<p><strong>原因浅析不是因果证明，只是公开信息层面的可能催化。</strong>本期观察池为 0 只，无个股可做原因浅析；二问层面的催化（Anthropic 算力融资方案、波音季报、消费者信心跳升、美联储议息与大科技财报在即）已在二问中注明，不重复贴到个股表。查不到写“无公开消息”，不硬编。</p>
+
+<h2>历史验证 · 五日前回看（2026-10-20 观察池）</h2>
+<p>口径：T+0=2026-10-20（入选日），T+1=2026-10-21 开盘价买入假设，T+2 至 T+5 为持有期。最高涨幅为盘中机会口径，不等于成交收益。</p>
+<p><strong>本节留空：</strong>框架包 daily_lookback 的 cohort 为 2026-10-20，但 events 为空、无冻结事件（A / B 来源统计均为 0 只），weekly_lookback 与月度累计同样为空。按“无对应已发布冻结名单则留空、不拿其他期顶替”的规则，本节不填数字、不拿 10-20 的 Drive 观察池 txt 临时替代（框架包口径与 Drive txt 口径不一致，且本期执行只读框架包、不查库、不代跑程序）。该 cohort 的回看缺失是框架包侧的缺口，不是“该期表现不好”的结论。</p>
+
+<p>缺失与异常汇总：框架包 status 为 partial（非 failed，故按规则发布）；missing 为 Q1 indices / limit_up / limit_down 三项（已用公开数据补指数，涨跌停本期无公开口径可补，不硬填）；issues 除 Yahoo 行业指数缺口外，还包括 78 只行业分类缺失、397/5616 只缺当日有效收盘、1/3/5 日涨幅数据不足分别为 33/37/40 只（分母 5219 只）、MA5/MA50 历史不足分别为 224/277 只、6/145 个行业板块行情不足（排名仅覆盖可计算板块）。</p>
+
+</body>
+</html>
